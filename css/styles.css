@@ -250,6 +250,12 @@ a{
     width:100%;
 }
 
+.btn--stretched{
+    padding-left:6rem;
+    padding-right:6rem;
+}
+
+
 
 
 @media screen and (min-width:1024px){
@@ -514,4 +520,89 @@ a{
     }
     
 
+  }
+
+  /* Callouts */
+
+  .callout{
+    padding:2rem;
+    border-radius: 2rem;
+    text-align:center;
+    
+
+  }
+
+  .callout--primary{
+    background: var(--color-primary);
+  }
+
+  .callout__heading{
+    color:#fff;
+    font-size:3rem;
+  }
+
+  .callout__content{
+    color:#fff;
+    
+  }
+
+
+  .callout__button{
+    align-self: center;
+    justify-items: center;
+
+  }
+
+  @media screen and (min-width:1024px){
+
+    .callout{
+        text-align: left;
+    }
+
+    .callout .grid--1X2{
+
+        grid-template-columns: 1fr auto;
+    
+      }
+
+    .callout__button{
+        padding-left:2rem;
+    }
+  }
+
+  /* Collapsibles */
+
+  .collapsible__header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .collapsible__headings{
+    margin-top:0;
+  }
+
+  .collapsible__icon{
+
+    transform:rotate(-90deg);
+    transition: transform 0.5s;
+
+  }
+
+  .collapsible__content{
+    /* display:none; */
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  .collapsible--expanded .collapsible__icon{
+    transform: rotate(0);
+    transition: transform 0.5s;
+  }
+
+  .collapsible--expanded .collapsible__content{
+    max-height: 100vh;
+    opacity:1;
+    transition: all 0.5s;
+    /* display: block; */
   }
