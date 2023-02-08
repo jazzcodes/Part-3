@@ -310,6 +310,11 @@ a{
 
 /* Plans */
 
+.plan{
+    width: 40%; 
+    padding: 4rem;
+}
+
 .plan__name {
     color: #fff;
     margin: 0;
@@ -348,8 +353,8 @@ a{
     width: 40px;
     display: inline-block;
     position: absolute;
+    right: 65%; 
     
-    right: 65%;
   }
 
 
@@ -370,4 +375,17 @@ a{
       font-size: 1.7rem;
     }
   }
+
+  /* Media */
+
+  .media{
+    display: flex;
+  }
   
+  .media__title{
+    margin-top:0;
+  }
+
+  .media__image{
+    margin:1rem 1rem; 
+  }
