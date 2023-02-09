@@ -6,7 +6,7 @@
     --color-body:#918ca4;
     --color-body-darker:#5c5577;
     --color-border:#ccc;
-    --border-radius:30px;
+    --border-radius:40px;
 
 }
 
@@ -201,6 +201,7 @@ a{
     white-space: nowrap;
     margin:1rem 0;
     text-align: center;
+    outline: 0;
 
 }
 
@@ -256,7 +257,13 @@ a{
     padding-right:6rem;
 }
 
-
+.btn .icon{
+  width:2rem;
+  height:2rem;
+  margin-right:1rem ;
+  vertical-align: middle;
+  
+}
 
 
 @media screen and (min-width:1024px){
@@ -290,11 +297,11 @@ a{
 .input-group .input{
     border:0;
     flex-grow:1;
-    padding:1.5rem 1rem;
+    padding:1.5rem 2rem;
 }
 
 .input-group .btn{
-    margin:4px;
+    margin:2px;
 }
 
 @media screen and (min-width:1024px) {
@@ -725,7 +732,7 @@ a{
     
   }
 
-  /* Hero/Banner */
+  /* Hero or Banner */
   
   .hero{
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
@@ -748,4 +755,36 @@ a{
     }
 
 
+  }
+
+  /* Domains Block */
+
+  .block-domain .input-group{
+    box-shadow: 0 0 30px 20px #e6ebee ;
+    border:0;
+    margin:4rem auto;
+    max-width: 70rem;
+    
+
+  }
+
+  .block-domain__prices{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 70rem;
+    margin:0 auto;
+  }
+
+  @media screen and (min-width:768px) {
+    .block-domain__prices{
+      grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+
+    }
+
+    
+    
   }
