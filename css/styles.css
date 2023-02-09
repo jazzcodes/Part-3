@@ -336,8 +336,7 @@ a{
 /* Plans */
 
 .plan{
-    width: 40%; 
-    padding: 4rem;
+
 }
 
 .plan__name {
@@ -378,7 +377,8 @@ a{
     width: 40px;
     display: inline-block;
     position: absolute;
-    right: 65%; 
+    right: 10%;
+    top: 56rem; 
     
   }
 
@@ -787,4 +787,14 @@ a{
 
     
     
+  }
+
+  /* Plans Block */
+
+  .block-plans .grid{
+    gap:4rem;
+  }
+
+  .block-plans .card{
+    max-width:500px;
   }
