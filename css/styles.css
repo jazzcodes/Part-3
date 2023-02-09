@@ -824,3 +824,21 @@ a{
       order:2;
     }
   }
+
+  /* Showcase Block */
+
+  .block-showcase{
+
+  }
+
+  .block-showcase img{
+    width: 100%;
+  }
+
+ .block-showcase__content{
+  display: flex;
+  flex-direction: column;
+ }
+
+
+  
