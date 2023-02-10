@@ -297,7 +297,8 @@ a{
 .input-group .input{
     border:0;
     flex-grow:1;
-    padding:1.5rem 2rem;
+    padding:1.5rem 4vw;
+    width:0;
 }
 
 .input-group .btn{
@@ -335,71 +336,86 @@ a{
 
 /* Plans */
 
-.plan{
-
+.plan {
+  transition: transform 0.2s ease-out;
+  
 }
 
 .plan__name {
-    color: #fff;
-    margin: 0;
-    font-weight: 500;
-    font-size: 2.4rem;
-  }
-  
-  .plan__price {
-    font-size: 6rem;
-  }
-  
-  .plan__billing-cycle {
-    font-size: 2.4rem;
-    font-weight: 300;
-    opacity: 0.8;
-    margin-right: 1rem;
-  }
-  
-  .plan__description {
-    font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 1px;
-    display: block;
-  }
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
 
-  .plan .list__item {
-    margin-bottom: 2rem;
-  }
+.plan__price {
+  font-size: 5rem;
+}
 
-  .plan--popular.card__header{
-    position:relative;
-  }
-  
-  .plan--popular .card__header::before {
-    content: url(../images/popular.svg);
-    width: 40px;
-    display: inline-block;
-    position: absolute;
-    right: 10%;
-    top: 56rem; 
-    
-  }
+.plan__billing-cycle {
+  font-size: 2rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
 
+.plan__description {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan--popular .card__header::before {
+  content: url(../images/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
+}
 
 @media screen and (min-width: 1024px) {
-    .plan__name {
-      font-size: 1.4rem;
-    }
-  
-    .plan__price {
-      font-size: 5rem;
-    }
-  
-    .plan__billing-cycle {
-      font-size: 1.6rem;
-    }
-  
-    .plan__description {
-      font-size: 1.7rem;
-    }
+
+
+
+  .plan--popular {
+    transform: scale(1.1);
   }
+
+  .plan__name {
+    font-size: 1.4rem;
+  }
+
+  .plan__price {
+    font-size: 5rem;
+  }
+
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+
+  .plan__description {
+    font-size: 1.7rem;
+  }
+}
+
 
   /* Media */
 
@@ -617,43 +633,44 @@ a{
 
   /* Blocks */
 
-  .block{
-    --padding-vertical:6rem;
+  .block {
+    --padding-vertical: 5rem;
     padding: var(--padding-vertical) 2rem;
   }
-
-  .block__header{
+  
+  .block__header {
     text-align: center;
     margin-bottom: 4rem;
   }
-
-  .block__heading{
+  
+  .block__heading {
     margin-top: 0;
   }
-
-  .block--dark{
-    background:#000;
+  
+  .block--dark {
+    background: #000;
     color: #7b858b;
-    
   }
-
-  .block--dark .block__heading{
+  
+  .block--dark h1,
+  .block--dark h2,
+  .block--dark h3 {
     color: #fff;
   }
-
-  .container {
-    max-width: 1140px;
-    margin: 0 auto;
-  }
-
+  
   .block--skewed-right {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
   }
   
   .block--skewed-left {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
+  }
+  
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
   }
 
   /* Navigation Menu */
@@ -792,12 +809,13 @@ a{
 
   /* Plans Block */
 
-  .block-plans .grid{
-    gap:4rem;
+  .block-plans .grid {
+    gap: 8rem 4rem;
   }
-
-  .block-plans .card{
-    max-width:500px;
+  
+  .block-plans .card {
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   /* Features Block */
@@ -914,4 +932,10 @@ a{
     margin-top:0rem;
   }
   
+}
+
+/* Sign-up Call-out */
+.callout-signup {
+  transform: translateY(5rem);
+ 
 }
