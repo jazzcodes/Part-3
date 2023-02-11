@@ -777,6 +777,15 @@ a{
   {
     .hero__content{
       text-align: left;
+      
+    }
+
+    .hero__content .block__heading{
+      font-size: 12rem;
+    }
+
+    .hero__content p{
+      font-size: 4rem;
     }
 
 
