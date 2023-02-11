@@ -414,6 +414,8 @@ a{
   .plan__description {
     font-size: 1.7rem;
   }
+
+  
 }
 
 
@@ -429,6 +431,11 @@ a{
 
   .media__image{
     margin:1rem 1rem; 
+  }
+
+  .media__content{
+    display: flex;
+    
   }
 
   /* Quotes */
@@ -818,6 +825,13 @@ a{
     margin: 0 auto;
   }
 
+  @media screen and (min-width:768px){
+    .block-plans .grid{
+      grid-template-columns: repeat(3,1fr);
+    }
+    
+  }
+
   /* Features Block */
 
   .features__heading{
@@ -846,15 +860,38 @@ a{
 
   /* Showcase Block */
 
+  .block-showcase .grid{
+    gap:2rem;
+  }
  
   .block-showcase img{
     width: 100%;
+    
+    
   }
 
  .block-showcase__content{
   display: flex;
   flex-direction: column;
+  margin:2rem;
+  justify-content: center;
+  
+
  }
+
+ .block-showcase .media__content{
+  margin:2rem;
+ }
+
+ .block-showcase .icon{
+  transform:translateY(-1rem);
+ }
+
+@media screen and (min-width:1024px){
+   .block-showcase .grid{
+    grid-template-columns: repeat(2,1fr);
+   }
+}
 
 /* Footer */
 .footer{
@@ -909,6 +946,7 @@ a{
 
   .footer__section{
     border:0;
+    margin-top: 2rem;
     
   }
 
@@ -935,4 +973,12 @@ a{
 .callout-signup {
   transform: translateY(5rem);
  
+}
+
+@media screen and (min-width:1024px) {
+
+  .callout-signup{
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
 }
